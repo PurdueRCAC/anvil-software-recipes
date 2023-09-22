@@ -1,0 +1,19 @@
+diff --git a/var/spack/repos/builtin/packages/dealii/package.py b/var/spack/repos/builtin/packages/dealii/package.py
+index df6f514134..e1a041b008 100644
+--- a/var/spack/repos/builtin/packages/dealii/package.py
++++ b/var/spack/repos/builtin/packages/dealii/package.py
+@@ -265,12 +265,12 @@ class Dealii(CMakePackage, CudaPackage):
+     patch(
+         "https://github.com/dealii/dealii/commit/06bb9dc07efb6fea9912ee0d66264af548c552c8.patch?full_index=1",
+         sha256="8a1f7b9a155c8c496ce08b2abb1ba5d329b3b29169f36c11678aa4e3cebf97a2",
+-        when="@9.4 ^hdf5",
++        when="@:9.4 ^hdf5",
+     )
+     patch(
+         "https://github.com/dealii/dealii/commit/40076ac1a013cd7d221f9dda913b4d0e6452c21e.patch?full_index=1",
+         sha256="7869dfab1116b6e862279bb6642c2c8fe49d87c42cfc6f031e03330f9f26a6c3",
+-        when="@9.4 ^python",
++        when="@:9.4 ^python",
+     )
+ 
+     # Fix issues with the FIND_GINKGO module for the newer Ginkgo versions
